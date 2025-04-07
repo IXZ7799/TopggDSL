@@ -1,0 +1,25 @@
+grammar uk.ac.kcl.topggdsl.TopggDSL with org.eclipse.xtext.common.Terminals
+
+generate topggDSL "http://www.kcl.ac.uk/topggdsl/TopggDSL"
+
+Model:
+    entries+=Entry*;
+
+Entry:
+    Bot | Review;
+
+Bot:
+    'name' name=STRING
+    'prefix' prefix=STRING
+    'tags' tags+=STRING (',' tags+=STRING)*
+    'description' description=STRING;
+
+Review:
+    'review' id=STRING
+    'refersTo' botRef=[Bot]
+    'status' status=Status
+    'reason' reason=STRING
+    'reviewer' reviewer=STRING;
+
+enum Status:
+    approved | declined | review;

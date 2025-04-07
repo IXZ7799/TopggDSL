@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: topggDSL
+Bundle-ManifestVersion: 2
+Bundle-Name: topggDSL
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: topggDSL; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.19.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.38.0",
+ org.eclipse.xtend.lib;bundle-version="2.38.0",
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: uk.ac.kcl.topggdsl.topggDSL.impl,
+ uk.ac.kcl.topggdsl.parser.antlr.internal,
+ uk.ac.kcl.topggdsl,
+ uk.ac.kcl.topggdsl.topggDSL,
+ uk.ac.kcl.topggdsl.parser.antlr,
+ uk.ac.kcl.topggdsl.topggDSL.util,
+ uk.ac.kcl.topggdsl.scoping,
+ uk.ac.kcl.topggdsl.services,
+ uk.ac.kcl.topggdsl.generator,
+ uk.ac.kcl.topggdsl.serializer,
+ uk.ac.kcl.topggdsl.validation
+Import-Package: org.apache.log4j
