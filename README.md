@@ -80,6 +80,7 @@ You can find the generator logic in `TopggDSLGenerator.xtend`.
 | `TopggDSLGenerator.xtend`     | JSON output logic                    |
 | `test.topgg`                  | Example input                        |
 | `output.json`                 | Generated output                     |
+| `TopggDSLParsingTest.xtend`   | Automated parsing + validation test |
 
 ---
 
