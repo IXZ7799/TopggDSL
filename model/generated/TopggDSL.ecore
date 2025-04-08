@@ -21,8 +21,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reviewer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Status">
-    <eLiterals name="approved" literal="approved"/>
-    <eLiterals name="declined" value="1" literal="declined"/>
-    <eLiterals name="review" value="2" literal="review"/>
+    <eLiterals name="APPROVED" literal="APPROVED"/>
+    <eLiterals name="DECLINED" value="1" literal="DECLINED"/>
+    <eLiterals name="REVIEW" value="2" literal="REVIEW"/>
   </eClassifiers>
 </ecore:EPackage>

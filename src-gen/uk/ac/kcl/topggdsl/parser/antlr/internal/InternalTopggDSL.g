@@ -399,26 +399,26 @@ ruleStatus returns [Enumerator current=null]
 }:
 	(
 		(
-			enumLiteral_0='approved'
+			enumLiteral_0='APPROVED'
 			{
-				$current = grammarAccess.getStatusAccess().getApprovedEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getStatusAccess().getApprovedEnumLiteralDeclaration_0());
+				$current = grammarAccess.getStatusAccess().getAPPROVEDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getStatusAccess().getAPPROVEDEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
-			enumLiteral_1='declined'
+			enumLiteral_1='DECLINED'
 			{
-				$current = grammarAccess.getStatusAccess().getDeclinedEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getStatusAccess().getDeclinedEnumLiteralDeclaration_1());
+				$current = grammarAccess.getStatusAccess().getDECLINEDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getStatusAccess().getDECLINEDEnumLiteralDeclaration_1());
 			}
 		)
 		    |
 		(
-			enumLiteral_2='review'
+			enumLiteral_2='REVIEW'
 			{
-				$current = grammarAccess.getStatusAccess().getReviewEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getStatusAccess().getReviewEnumLiteralDeclaration_2());
+				$current = grammarAccess.getStatusAccess().getREVIEWEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getStatusAccess().getREVIEWEnumLiteralDeclaration_2());
 			}
 		)
 	)

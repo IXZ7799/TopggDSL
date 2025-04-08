@@ -227,34 +227,34 @@ public class TopggDSLGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	public class StatusElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.topggdsl.TopggDSL.Status");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cApprovedEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cApprovedApprovedKeyword_0_0 = (Keyword)cApprovedEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cDeclinedEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cDeclinedDeclinedKeyword_1_0 = (Keyword)cDeclinedEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cReviewEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cReviewReviewKeyword_2_0 = (Keyword)cReviewEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cAPPROVEDEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cAPPROVEDAPPROVEDKeyword_0_0 = (Keyword)cAPPROVEDEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cDECLINEDEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cDECLINEDDECLINEDKeyword_1_0 = (Keyword)cDECLINEDEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cREVIEWEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cREVIEWREVIEWKeyword_2_0 = (Keyword)cREVIEWEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum Status:
-		//    approved | declined | review;
+		//    APPROVED | DECLINED | REVIEW;
 		public EnumRule getRule() { return rule; }
 		
-		//approved | declined | review
+		//APPROVED | DECLINED | REVIEW
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//approved
-		public EnumLiteralDeclaration getApprovedEnumLiteralDeclaration_0() { return cApprovedEnumLiteralDeclaration_0; }
+		//APPROVED
+		public EnumLiteralDeclaration getAPPROVEDEnumLiteralDeclaration_0() { return cAPPROVEDEnumLiteralDeclaration_0; }
 		
-		public Keyword getApprovedApprovedKeyword_0_0() { return cApprovedApprovedKeyword_0_0; }
+		public Keyword getAPPROVEDAPPROVEDKeyword_0_0() { return cAPPROVEDAPPROVEDKeyword_0_0; }
 		
-		//declined
-		public EnumLiteralDeclaration getDeclinedEnumLiteralDeclaration_1() { return cDeclinedEnumLiteralDeclaration_1; }
+		//DECLINED
+		public EnumLiteralDeclaration getDECLINEDEnumLiteralDeclaration_1() { return cDECLINEDEnumLiteralDeclaration_1; }
 		
-		public Keyword getDeclinedDeclinedKeyword_1_0() { return cDeclinedDeclinedKeyword_1_0; }
+		public Keyword getDECLINEDDECLINEDKeyword_1_0() { return cDECLINEDDECLINEDKeyword_1_0; }
 		
-		//review
-		public EnumLiteralDeclaration getReviewEnumLiteralDeclaration_2() { return cReviewEnumLiteralDeclaration_2; }
+		//REVIEW
+		public EnumLiteralDeclaration getREVIEWEnumLiteralDeclaration_2() { return cREVIEWEnumLiteralDeclaration_2; }
 		
-		public Keyword getReviewReviewKeyword_2_0() { return cReviewReviewKeyword_2_0; }
+		public Keyword getREVIEWREVIEWKeyword_2_0() { return cREVIEWREVIEWKeyword_2_0; }
 	}
 	
 	private final ModelElements pModel;
@@ -354,7 +354,7 @@ public class TopggDSLGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//enum Status:
-	//    approved | declined | review;
+	//    APPROVED | DECLINED | REVIEW;
 	public StatusElements getStatusAccess() {
 		return eStatus;
 	}

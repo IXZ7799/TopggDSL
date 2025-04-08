@@ -22,4 +22,4 @@ Review:
     'reviewer' reviewer=STRING;
 
 enum Status:
-    approved | declined | review;
+    APPROVED | DECLINED | REVIEW;

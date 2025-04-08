@@ -7,9 +7,9 @@
   <genPackages prefix="TopggDSL" basePackage="uk.ac.kcl.topggdsl" disposableProviderFactory="true"
       fileExtensions="topgg" ecorePackage="TopggDSL.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="TopggDSL.ecore#//Status">
-      <genEnumLiterals ecoreEnumLiteral="TopggDSL.ecore#//Status/approved"/>
-      <genEnumLiterals ecoreEnumLiteral="TopggDSL.ecore#//Status/declined"/>
-      <genEnumLiterals ecoreEnumLiteral="TopggDSL.ecore#//Status/review"/>
+      <genEnumLiterals ecoreEnumLiteral="TopggDSL.ecore#//Status/APPROVED"/>
+      <genEnumLiterals ecoreEnumLiteral="TopggDSL.ecore#//Status/DECLINED"/>
+      <genEnumLiterals ecoreEnumLiteral="TopggDSL.ecore#//Status/REVIEW"/>
     </genEnums>
     <genClasses ecoreClass="TopggDSL.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TopggDSL.ecore#//Model/entries"/>

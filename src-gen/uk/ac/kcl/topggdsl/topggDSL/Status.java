@@ -21,63 +21,63 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum Status implements Enumerator
 {
   /**
-   * The '<em><b>Approved</b></em>' literal object.
+   * The '<em><b>APPROVED</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #APPROVED_VALUE
    * @generated
    * @ordered
    */
-  APPROVED(0, "approved", "approved"),
+  APPROVED(0, "APPROVED", "APPROVED"),
 
   /**
-   * The '<em><b>Declined</b></em>' literal object.
+   * The '<em><b>DECLINED</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #DECLINED_VALUE
    * @generated
    * @ordered
    */
-  DECLINED(1, "declined", "declined"),
+  DECLINED(1, "DECLINED", "DECLINED"),
 
   /**
-   * The '<em><b>Review</b></em>' literal object.
+   * The '<em><b>REVIEW</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #REVIEW_VALUE
    * @generated
    * @ordered
    */
-  REVIEW(2, "review", "review");
+  REVIEW(2, "REVIEW", "REVIEW");
 
   /**
-   * The '<em><b>Approved</b></em>' literal value.
+   * The '<em><b>APPROVED</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #APPROVED
-   * @model name="approved"
+   * @model
    * @generated
    * @ordered
    */
   public static final int APPROVED_VALUE = 0;
 
   /**
-   * The '<em><b>Declined</b></em>' literal value.
+   * The '<em><b>DECLINED</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #DECLINED
-   * @model name="declined"
+   * @model
    * @generated
    * @ordered
    */
   public static final int DECLINED_VALUE = 1;
 
   /**
-   * The '<em><b>Review</b></em>' literal value.
+   * The '<em><b>REVIEW</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #REVIEW
-   * @model name="review"
+   * @model
    * @generated
    * @ordered
    */

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTopggDSLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'name'", "'prefix'", "'tags'", "','", "'description'", "'review'", "'refersTo'", "'status'", "'reason'", "'reviewer'", "'approved'", "'declined'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'name'", "'prefix'", "'tags'", "','", "'description'", "'review'", "'refersTo'", "'status'", "'reason'", "'reviewer'", "'APPROVED'", "'DECLINED'", "'REVIEW'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -42,6 +42,7 @@ public class InternalTopggDSLParser extends AbstractInternalAntlrParser {
     public static final int RULE_INT=6;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
+    public static final int T__23=23;
     public static final int T__20=20;
     public static final int T__21=21;
 
@@ -825,7 +826,7 @@ public class InternalTopggDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStatus"
-    // InternalTopggDSL.g:393:1: ruleStatus returns [Enumerator current=null] : ( (enumLiteral_0= 'approved' ) | (enumLiteral_1= 'declined' ) | (enumLiteral_2= 'review' ) ) ;
+    // InternalTopggDSL.g:393:1: ruleStatus returns [Enumerator current=null] : ( (enumLiteral_0= 'APPROVED' ) | (enumLiteral_1= 'DECLINED' ) | (enumLiteral_2= 'REVIEW' ) ) ;
     public final Enumerator ruleStatus() throws RecognitionException {
         Enumerator current = null;
 
@@ -837,10 +838,10 @@ public class InternalTopggDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTopggDSL.g:399:2: ( ( (enumLiteral_0= 'approved' ) | (enumLiteral_1= 'declined' ) | (enumLiteral_2= 'review' ) ) )
-            // InternalTopggDSL.g:400:2: ( (enumLiteral_0= 'approved' ) | (enumLiteral_1= 'declined' ) | (enumLiteral_2= 'review' ) )
+            // InternalTopggDSL.g:399:2: ( ( (enumLiteral_0= 'APPROVED' ) | (enumLiteral_1= 'DECLINED' ) | (enumLiteral_2= 'REVIEW' ) ) )
+            // InternalTopggDSL.g:400:2: ( (enumLiteral_0= 'APPROVED' ) | (enumLiteral_1= 'DECLINED' ) | (enumLiteral_2= 'REVIEW' ) )
             {
-            // InternalTopggDSL.g:400:2: ( (enumLiteral_0= 'approved' ) | (enumLiteral_1= 'declined' ) | (enumLiteral_2= 'review' ) )
+            // InternalTopggDSL.g:400:2: ( (enumLiteral_0= 'APPROVED' ) | (enumLiteral_1= 'DECLINED' ) | (enumLiteral_2= 'REVIEW' ) )
             int alt4=3;
             switch ( input.LA(1) ) {
             case 21:
@@ -853,7 +854,7 @@ public class InternalTopggDSLParser extends AbstractInternalAntlrParser {
                 alt4=2;
                 }
                 break;
-            case 16:
+            case 23:
                 {
                 alt4=3;
                 }
@@ -867,15 +868,15 @@ public class InternalTopggDSLParser extends AbstractInternalAntlrParser {
 
             switch (alt4) {
                 case 1 :
-                    // InternalTopggDSL.g:401:3: (enumLiteral_0= 'approved' )
+                    // InternalTopggDSL.g:401:3: (enumLiteral_0= 'APPROVED' )
                     {
-                    // InternalTopggDSL.g:401:3: (enumLiteral_0= 'approved' )
-                    // InternalTopggDSL.g:402:4: enumLiteral_0= 'approved'
+                    // InternalTopggDSL.g:401:3: (enumLiteral_0= 'APPROVED' )
+                    // InternalTopggDSL.g:402:4: enumLiteral_0= 'APPROVED'
                     {
                     enumLiteral_0=(Token)match(input,21,FOLLOW_2); 
 
-                    				current = grammarAccess.getStatusAccess().getApprovedEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                    				newLeafNode(enumLiteral_0, grammarAccess.getStatusAccess().getApprovedEnumLiteralDeclaration_0());
+                    				current = grammarAccess.getStatusAccess().getAPPROVEDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_0, grammarAccess.getStatusAccess().getAPPROVEDEnumLiteralDeclaration_0());
                     			
 
                     }
@@ -884,15 +885,15 @@ public class InternalTopggDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTopggDSL.g:409:3: (enumLiteral_1= 'declined' )
+                    // InternalTopggDSL.g:409:3: (enumLiteral_1= 'DECLINED' )
                     {
-                    // InternalTopggDSL.g:409:3: (enumLiteral_1= 'declined' )
-                    // InternalTopggDSL.g:410:4: enumLiteral_1= 'declined'
+                    // InternalTopggDSL.g:409:3: (enumLiteral_1= 'DECLINED' )
+                    // InternalTopggDSL.g:410:4: enumLiteral_1= 'DECLINED'
                     {
                     enumLiteral_1=(Token)match(input,22,FOLLOW_2); 
 
-                    				current = grammarAccess.getStatusAccess().getDeclinedEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                    				newLeafNode(enumLiteral_1, grammarAccess.getStatusAccess().getDeclinedEnumLiteralDeclaration_1());
+                    				current = grammarAccess.getStatusAccess().getDECLINEDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_1, grammarAccess.getStatusAccess().getDECLINEDEnumLiteralDeclaration_1());
                     			
 
                     }
@@ -901,15 +902,15 @@ public class InternalTopggDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalTopggDSL.g:417:3: (enumLiteral_2= 'review' )
+                    // InternalTopggDSL.g:417:3: (enumLiteral_2= 'REVIEW' )
                     {
-                    // InternalTopggDSL.g:417:3: (enumLiteral_2= 'review' )
-                    // InternalTopggDSL.g:418:4: enumLiteral_2= 'review'
+                    // InternalTopggDSL.g:417:3: (enumLiteral_2= 'REVIEW' )
+                    // InternalTopggDSL.g:418:4: enumLiteral_2= 'REVIEW'
                     {
-                    enumLiteral_2=(Token)match(input,16,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,23,FOLLOW_2); 
 
-                    				current = grammarAccess.getStatusAccess().getReviewEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                    				newLeafNode(enumLiteral_2, grammarAccess.getStatusAccess().getReviewEnumLiteralDeclaration_2());
+                    				current = grammarAccess.getStatusAccess().getREVIEWEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_2, grammarAccess.getStatusAccess().getREVIEWEnumLiteralDeclaration_2());
                     			
 
                     }
@@ -953,7 +954,7 @@ public class InternalTopggDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000610000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000E00000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
 
