@@ -1,0 +1,21 @@
+name "MusicBot"
+prefix "!"
+tags "music", "fun"
+description "A lo-fi music bot."
+
+review "r1"
+refersTo MusicBot
+status APPROVED
+reason "Well-behaved bot"
+reviewer "Admin"
+
+name "GameBot"
+prefix ">"
+tags "game", "play"
+description "A 2D game bot."
+
+review "r2"
+refersTo GameBot
+status DECLINED
+reason "Spam detected"
+reviewer "Mod"

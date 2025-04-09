@@ -1,0 +1,48 @@
+{
+  "bots": [
+    {
+      "name": "MusicBot",
+      "prefix": "!",
+      "description": "A lo-fi music bot.",
+      "tags": [
+        "music",
+        "fun"
+      ]
+    },
+    {
+      "name": "GameBot",
+      "prefix": "\u003e",
+      "description": "A 2D game bot.",
+      "tags": [
+        "game",
+        "play"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "refersTo": "MusicBot",
+      "status": "APPROVED",
+      "reason": "Well-behaved bot",
+      "reviewer": "Admin"
+    },
+    {
+      "id": "r2",
+      "refersTo": "GameBot",
+      "status": "DECLINED",
+      "reason": "Spam detected",
+      "reviewer": "Mod"
+    }
+  ],
+  "summary": {
+    "totalBots": 2,
+    "reviewedBots": 2,
+    "unreviewedBots": 0,
+    "reviewStatusCount": {
+      "APPROVED": 1,
+      "DECLINED": 1,
+      "REVIEW": 0
+    }
+  }
+}
