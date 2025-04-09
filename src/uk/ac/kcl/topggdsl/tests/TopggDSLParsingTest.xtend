@@ -52,13 +52,8 @@ class TopggDSLParsingTest {
         '''
 
         val model = input.parse
-        val bot = model.entries.filter(typeof(Bot)).head
-
-        bot.assertError(
-            TopggDSLPackage.eINSTANCE.bot,
-            null,
-            "A bot must have at least one tag."
-        )
+        assertNotNull(model)
+        assertError(model, TopggDSLPackage.Literals.BOT, null, "A bot must have at least one tag.")
     }
 
     @Test
@@ -77,19 +72,14 @@ class TopggDSLParsingTest {
         '''
 
         val model = input.parse
-        val review = model.entries.filter(typeof(Review)).head
-
-        review.assertWarning(
-            TopggDSLPackage.eINSTANCE.review,
-            null,
-            "Reviews that are not approved must include a reason."
-        )
+        assertNotNull(model)
+        assertWarning(model, TopggDSLPackage.Literals.REVIEW, null, "Reviews that are not approved must include a reason.")
     }
 
     @Test
     def void testConflictingReviews() {
-        val model = '''
-            name "Bot1"
+        val input = '''
+            name Bot1
             prefix "!"
             tags "general"
             description "A general bot"
@@ -105,7 +95,9 @@ class TopggDSLParsingTest {
             status declined
             reason "Bad bot"
             reviewer "Tester2"
-        '''.parse
+        '''
+
+        val model = input.parse
         assertNotNull(model)
         assertWarning(model, TopggDSLPackage.Literals.REVIEW, null, "Bot 'Bot1' has conflicting reviews: both APPROVED and DECLINED.")
     }
