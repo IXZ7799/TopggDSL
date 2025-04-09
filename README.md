@@ -1,7 +1,6 @@
 # TopggDSL - A Domain-Specific Language for Discord Bot Reviews
 
-Created by **Zobaiya Hasan (K20073377)**  
-For the Model-Driven Development coursework @ King’s College London
+Created by me for the Model-Driven Development coursework.
 
 ---
 
