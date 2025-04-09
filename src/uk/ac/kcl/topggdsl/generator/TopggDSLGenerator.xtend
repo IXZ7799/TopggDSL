@@ -7,6 +7,7 @@ import org.eclipse.xtext.generator.IGeneratorContext
 import uk.ac.kcl.topggdsl.topggDSL.Model
 import uk.ac.kcl.topggdsl.topggDSL.Bot
 import uk.ac.kcl.topggdsl.topggDSL.Review
+import uk.ac.kcl.topggdsl.topggDSL.Status
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject
 import com.google.gson.JsonArray
@@ -60,6 +61,30 @@ class TopggDSLGenerator implements IGenerator2 {
 
             root.add("bots", botsArray)
             root.add("reviews", reviewsArray)
+
+            val botNames = model.entries.filter(Bot).map[name].toSet
+            val reviewedBotNames = model.entries.filter(Review).map[botRef.name].toSet
+            val unreviewedBotCount = botNames.size - reviewedBotNames.size
+
+            val reviewCounts = <Status, Integer>newHashMap
+			model.entries.filter(Review).groupBy[status].entrySet.forEach [
+			reviewCounts.put(key, value.size)
+			]
+
+
+            val summary = new JsonObject
+            summary.addProperty("totalBots", botNames.size)
+            summary.addProperty("reviewedBots", reviewedBotNames.size)
+            summary.addProperty("unreviewedBots", unreviewedBotCount)
+
+            val statusCounts = new JsonObject
+            Status.values.forEach [
+                val count = reviewCounts.getOrDefault(it, 0)
+                statusCounts.addProperty(it.toString, count)
+            ]
+            summary.add("reviewStatusCount", statusCounts)
+
+            root.add("summary", summary)
 
             val jsonOutput = gson.toJson(root)
             fsa.generateFile("output.json", jsonOutput)
